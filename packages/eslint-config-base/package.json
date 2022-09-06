@@ -2,17 +2,19 @@
   "name": "eslint-config-base",
   "version": "0.0.0",
   "private": true,
-  "main": "index.cjs",
   "license": "MIT",
+  "main": "index.cjs",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "eslint": "^7.23.0",
-    "eslint-config-prettier": "^8.3.0",
     "eslint-config-turbo": "latest"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint-config-prettier": "^8.5.0",
     "typescript": "^4.7.4"
   }
 }

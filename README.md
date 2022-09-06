@@ -16,3 +16,7 @@ The following plugins are planned:
 
 - **remark-astro-auto-layout** - lets users define a default layout for all MDX-pages in a directory and its subdirectories.
 - **remark-astro-auto-import** - lets users define a set of components that can be used in MDX-files without explicitly being imported.
+
+## Future enhancements
+
+- Support tailwind for components coming from a monorepo, see the [Turborepo examples](https://github.com/vercel/turborepo/tree/main/examples/with-tailwind) for details
