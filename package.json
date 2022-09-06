@@ -1,5 +1,5 @@
 {
-  "name": "@astro-m2dx",
+  "name": "@astro-m2dx/root",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -12,14 +12,13 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
-  "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "turbo": "latest"
-  },
+  "packageManager": "pnpm@7.9.4",
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
-  "packageManager": "pnpm@7.9.4"
+  "devDependencies": {
+    "eslint-config-base": "workspace:*",
+    "prettier": "latest",
+    "turbo": "latest"
+  }
 }
