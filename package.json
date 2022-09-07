@@ -1,25 +1,25 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --no-cache --parallel --continue",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,md,mdx,astro}\"",
-    "changeset": "changeset",
-    "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format",
-    "release": "turbo run build && changeset publish"
-  },
-  "packageManager": "pnpm@7.9.4",
-  "engines": {
-    "node": ">=14.0.0",
-    "pnpm": ">=7.9.4"
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.24.4",
-    "eslint-config-base": "workspace:*",
-    "prettier": "latest",
-    "prettier-plugin-astro": "^0.5.4",
-    "turbo": "latest"
-  }
+    "private": true,
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev --no-cache --parallel --continue",
+        "lint": "turbo run lint",
+        "clean": "turbo run clean && rm -rf node_modules",
+        "format": "prettier --write \"**/*.{ts,tsx,md,mdx,astro}\"",
+        "changeset": "changeset",
+        "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format",
+        "release": "turbo run build && changeset publish"
+    },
+    "packageManager": "pnpm@7.11.0",
+    "engines": {
+        "node": ">=14.0.0",
+        "pnpm": ">=7.11.0"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.24.4",
+        "eslint-config-base": "workspace:*",
+        "prettier": "latest",
+        "prettier-plugin-astro": "^0.5.4",
+        "turbo": "latest"
+    }
 }
