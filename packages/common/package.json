@@ -1,6 +1,6 @@
 {
     "name": "@astro-m2dx/common",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Common utilities for developing Astro MDX plugins",
     "author": "christian@hackyourshack.org",
     "license": "MIT",

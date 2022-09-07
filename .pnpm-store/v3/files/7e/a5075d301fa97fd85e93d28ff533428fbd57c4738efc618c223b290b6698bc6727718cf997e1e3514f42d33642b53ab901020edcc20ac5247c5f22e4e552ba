@@ -1,0 +1,12 @@
+import type { AstroConfig } from '../../@types/astro';
+import type { BuildInternals } from './internal';
+import type { StaticBuildOptions } from './types';
+import { Plugin as VitePlugin } from 'vite';
+interface PluginOptions {
+    internals: BuildInternals;
+    buildOptions: StaticBuildOptions;
+    target: 'client' | 'server';
+    astroConfig: AstroConfig;
+}
+export declare function rollupPluginAstroBuildCSS(options: PluginOptions): VitePlugin[];
+export {};
