@@ -1,6 +1,6 @@
 {
     "name": "@astro-m2dx/web",
-    "version": "0.0.1",
+    "version": "0.0.0",
     "private": true,
     "scripts": {
         "dev": "astro dev",
@@ -15,6 +15,7 @@
         "tsconfig": "workspace:*"
     },
     "dependencies": {
-        "astro": "^1.1.5"
+        "astro": "^1.1.5",
+        "@astro-m2dx/remark-astro-auto-layout": "workspace:*"
     }
 }
