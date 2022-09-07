@@ -7,8 +7,8 @@
         "clean": "turbo run clean && rm -rf node_modules",
         "format": "prettier --write \"**/*.{ts,tsx,md,mdx,astro}\"",
         "changeset": "changeset",
-        "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format",
-        "release": "turbo run build && changeset publish"
+        "bump-version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format",
+        "publish": "turbo run build && changeset publish"
     },
     "packageManager": "pnpm@7.11.0",
     "engines": {

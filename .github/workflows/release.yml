@@ -1,39 +1,49 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
+
+env:
+    CI: true
+    PNPM_CACHE_FOLDER: .pnpm-store
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
+    release:
+        name: Release
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v2
 
-      - name: Setup Node.js 16.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
+            - name: Setup Node.js 16.x
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 16.x
 
-      - name: Install Dependencies
-        run: yarn
+            - name: Install pnpm
+              run: npm i pnpm@latest -g
 
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: yarn release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            - name: Setup pnpm config
+              run: pnpm config set store-dir $PNPM_CACHE_FOLDER
 
-      - name: Send a Slack notification if a publish happens
-        if: steps.changesets.outputs.published == 'true'
-        # You can do something when a publish happens.
-        run: my-slack-bot send-notification --message "A new version of ${GITHUB_REPOSITORY} was published!"
+            - name: Setup npmrc
+              run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
+            - name: Install Dependencies
+              run: pnpm install
+
+            - name: Create Release Pull Request or Publish to npm
+              id: changesets
+              uses: changesets/action@v1
+              with:
+                  version: pnpm bump-version
+                  commit: 'chore: update versions'
+                  title: 'chore: update versions'
+                  publish: pnpm publish
+              env:
+                  GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
