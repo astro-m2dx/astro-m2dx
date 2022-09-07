@@ -6,8 +6,8 @@
         "lint": "turbo run lint",
         "clean": "turbo run clean && rm -rf node_modules",
         "format": "prettier --write \"**/*.{ts,tsx,md,mdx,astro}\"",
-        "changeset": "changeset",
-        "bump-version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format",
+        "changeset": "pnpm install --no-frozen-lockfile && pnpm run format && changeset",
+        "version": "changeset version",
         "publish": "turbo run build && changeset publish"
     },
     "packageManager": "pnpm@7.11.0",
@@ -15,7 +15,8 @@
         "node": ">=14.0.0",
         "pnpm": ">=7.11.0"
     },
-    "devDependencies": {
+    "dependencies": {
+        "@changesets/changelog-github": "^0.4.6",
         "@changesets/cli": "^2.24.4",
         "eslint-config-base": "workspace:*",
         "prettier": "latest",
