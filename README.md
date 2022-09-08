@@ -15,11 +15,11 @@ The plugins can be found in `packages/*` and will be published to [NPM](https://
 The following plugins are available:
 
 - **remark-astro-auto-layout** - lets users define a default layout for all MDX-pages in a directory and its subdirectories.
+- **vite-astro-mdx-mapping** - lets users define a mapping from standard html elements to JSX components on a per-directory basis.
 
 The following plugins are planned:
 
 - **remark-astro-auto-import** - lets users define a set of components that can be used in MDX-files without explicitly being imported.
-- **vite-astro-mdx-mapping** - lets users define a mapping from standard html elements to JSX components on a per-directory basis.
 - **remark-astro-sectionize-headings** - wrap headings and the following paragraphs into sections, e.g. to style them.
 - **remark-astro-import-src** - imports files relative to referencing file from string `src` attributes.
 - **remark-astro-style-directive** - lets users apply CSS classes to the HTML elements resulting from the markdown.

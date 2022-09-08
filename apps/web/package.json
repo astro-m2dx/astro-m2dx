@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "@astro-m2dx/remark-astro-auto-layout": "workspace:*",
+        "@astro-m2dx/vite-astro-mdx-mapping": "workspace:*",
         "astro": "^1.1.7"
     }
 }
