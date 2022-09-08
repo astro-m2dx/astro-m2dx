@@ -6,18 +6,24 @@ _Astro M²DX_ provides tools to setup your publishing pipeline based on **clean*
 
 With clean we mean markdown, with only a few sprinkles of JSX and without overloading the frontmatter.
 
+This is the complete MDX source for this page (embedded from the injected raw content, see plugin `remark-astro-raw-mdx` for details):
+
+import { Code } from 'astro/components';
+
+<Code code={frontmatter.mdx} lang="mdx" theme="solarized-light" wrap />
+
 ## Check out the existing plugins...
 
 - **remark-astro-auto-layout** - lets users define a default layout for all MDX-pages in a directory and its subdirectories.
 - **vite-astro-mdx-mapping** - lets users define a mapping from standard html elements to JSX components on a per-directory basis.
+- **remark-astro-raw-mdx** - adds the raw MDX content to the frontmatter, to analyze in the layout, e.g. to compute reading time.
 
 ## Discuss upcoming plugins...
 
-- **remark-astro-raw-content** - adds the raw markdown content to the frontmatter, to analyze in the layout, e.g. to compute reading time.
+- **remark-astro-auto-import** - lets users define a set of components that can be used in MDX-files without explicitly being imported.
 - **remark-astro-mdast** - adds the markdown AST (`mdast`) to the frontmatter, to analyze in the layout, e.g. to generate a TOC.
 - **remark-astro-hast** - adds the HTML AST (`hast`) to the frontmatter, to analyze in the layout, e.g. to ???.
 - **remark-astro-sectionize-headings** - wrap headings and the following paragraphs into sections, e.g. to style them.
-- **remark-astro-auto-import** - lets users define a set of components that can be used in MDX-files without explicitly being imported.
 - **remark-astro-import-src** - imports files relative to referencing file from string `src` attributes.
 - **remark-astro-title-abstract** - extracts the title and abstract of a markdown file and adds it to the frontmatter `title` and `abstract` properties.
 - **remark-astro-style-directive** - lets users apply CSS classes to the HTML elements resulting from the markdown.
