@@ -8,19 +8,37 @@ With clean we mean markdown, with only a few sprinkles of JSX and without overlo
 
 This is the complete MDX source for this page (embedded from the injected raw content, see plugin `remark-astro-raw-mdx` for details):
 
-import { Code } from 'astro/components';
-
 <Code code={frontmatter.mdx} lang="mdx" theme="solarized-light" wrap />
+
+> Have you noticed how clean the markdown is?  
+>  ✔️ No frontmatter  
+>  ✔️ No imports required  
+>  ✔️ Only very few components  
+>  ✔️ Mostly pure markdown
 
 ## Check out the existing plugins...
 
-- **remark-astro-auto-layout** - lets users define a default layout for all MDX-pages in a directory and its subdirectories.
-- **vite-astro-mdx-mapping** - lets users define a mapping from standard html elements to JSX components on a per-directory basis.
-- **remark-astro-raw-mdx** - adds the raw MDX content to the frontmatter, to analyze in the layout, e.g. to compute reading time.
+<Wrap>
+  <Card title="Auto Layout">
+    `remark-astro-auto-layout` lets users define a default layout for all MDX-pages in a directory
+    and its subdirectories.
+  </Card>
+  <Card title="Element Mapping">
+    Plugin `vite-astro-mdx-mapping` lets users define a mapping from standard html elements to JSX
+    components on a per-directory basis.
+  </Card>
+  <Card title="Raw MDX Content">
+    Plugin `remark-astro-raw-mdx` adds the raw MDX content to the frontmatter, to analyze in the
+    layout, e.g. to compute reading time.
+  </Card>
+  <Card title="Auto Import">
+    Plugin `remark-astro-auto-import` lets users define a set of components that can be used in
+    MDX-files without explicitly being imported.
+  </Card>
+</Wrap>
 
 ## Discuss upcoming plugins...
 
-- **remark-astro-auto-import** - lets users define a set of components that can be used in MDX-files without explicitly being imported.
 - **remark-astro-mdast** - adds the markdown AST (`mdast`) to the frontmatter, to analyze in the layout, e.g. to generate a TOC.
 - **remark-astro-hast** - adds the HTML AST (`hast`) to the frontmatter, to analyze in the layout, e.g. to ???.
 - **remark-astro-sectionize-headings** - wrap headings and the following paragraphs into sections, e.g. to style them.

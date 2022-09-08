@@ -20,6 +20,7 @@ importers:
 
   apps/web:
     specifiers:
+      '@astro-m2dx/remark-astro-auto-import': workspace:*
       '@astro-m2dx/remark-astro-auto-layout': workspace:*
       '@astro-m2dx/remark-astro-raw-mdx': workspace:*
       '@astro-m2dx/vite-astro-mdx-mapping': workspace:*
@@ -34,6 +35,7 @@ importers:
       tailwindcss: ^3.1.8
       tsconfig: workspace:*
     dependencies:
+      '@astro-m2dx/remark-astro-auto-import': link:../../packages/remark-astro-auto-import
       '@astro-m2dx/remark-astro-auto-layout': link:../../packages/remark-astro-auto-layout
       '@astro-m2dx/remark-astro-raw-mdx': link:../../packages/remark-astro-raw-mdx
       '@astro-m2dx/vite-astro-mdx-mapping': link:../../packages/vite-astro-mdx-mapping
@@ -90,6 +92,27 @@ importers:
       typescript: 4.8.2
       unified: 10.1.2
       vfile: 5.3.4
+
+  packages/remark-astro-auto-import:
+    specifiers:
+      '@astro-m2dx/common': workspace:*
+      '@types/mdast': ^3.0.10
+      eslint-config-base: workspace:*
+      rimraf: ^3.0.2
+      tsconfig: workspace:*
+      typescript: ^4.7.4
+      unified: ^10.1.2
+      unist-util-visit: ^4.1.1
+    dependencies:
+      '@astro-m2dx/common': link:../common
+      unist-util-visit: 4.1.1
+    devDependencies:
+      '@types/mdast': 3.0.10
+      eslint-config-base: link:../../config/eslint-config-base
+      rimraf: 3.0.2
+      tsconfig: link:../../config/tsconfig
+      typescript: 4.8.2
+      unified: 10.1.2
 
   packages/remark-astro-auto-layout:
     specifiers:

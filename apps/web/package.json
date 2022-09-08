@@ -21,6 +21,7 @@
         "tsconfig": "workspace:*"
     },
     "dependencies": {
+        "@astro-m2dx/remark-astro-auto-import": "workspace:*",
         "@astro-m2dx/remark-astro-auto-layout": "workspace:*",
         "@astro-m2dx/remark-astro-raw-mdx": "workspace:*",
         "@astro-m2dx/vite-astro-mdx-mapping": "workspace:*",
