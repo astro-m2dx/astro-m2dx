@@ -7,6 +7,7 @@ importers:
       '@changesets/changelog-github': ^0.4.6
       '@changesets/cli': ^2.24.4
       eslint-config-base: workspace:*
+      pnpm: ^7.11.0
       prettier: latest
       prettier-plugin-astro: ^0.5.4
       turbo: latest
@@ -17,6 +18,8 @@ importers:
       prettier: 2.7.1
       prettier-plugin-astro: 0.5.4
       turbo: 1.4.6
+    devDependencies:
+      pnpm: 7.11.0
 
   apps/web:
     specifiers:
@@ -4194,6 +4197,12 @@ packages:
     dependencies:
       find-up: 4.1.0
     dev: false
+
+  /pnpm/7.11.0:
+    resolution: {integrity: sha512-cxh4TfCE8L4ZbLBN72kTGKTYP7X08nrIzoQ2rQCKihAcIHAdNIgsk4bEJyE1xHjE+bNJt9skwr7aJv3LpvUawQ==}
+    engines: {node: '>=14.6'}
+    hasBin: true
+    dev: true
 
   /postcss-import/14.1.0_postcss@8.4.16:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
