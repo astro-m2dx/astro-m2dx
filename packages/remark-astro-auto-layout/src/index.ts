@@ -1,8 +1,8 @@
-import { Plugin } from 'unified';
-import { Root } from 'mdast';
-import { VFile, findClosest } from '@astro-m2dx/common';
+import { findUp, VFile } from '@astro-m2dx/common';
 import { join } from 'path';
+import { Plugin } from 'unified';
 
+const DEFAULT_NAME = '_layout.astro';
 /**
  * Structured options for plugin remark-astro-auto-layout
  *
@@ -22,14 +22,32 @@ export interface Options {
     name: string;
 }
 
-const plugin: Plugin<[Partial<Options>], Root> = (options = {}) => {
-    const { name = '_layout.astro' } = options;
-    return (_, file) => {
+/**
+ * Plugin
+ * @param options optional `name` property for the layout file
+ * @returns transformer function, that operates only on VFile level
+ */
+export const plugin: Plugin<[Partial<Options>], unknown> = (options = {}) => {
+    const { name = DEFAULT_NAME } = options;
+    const cache: Record<string, string> = {};
+
+    function findLayoutFile(dir: string, stop: string) {
+        let found: string | undefined = cache[dir];
+        if (!found) {
+            found = findUp(name, dir, stop);
+            if (found) {
+                cache[dir] = found;
+            }
+        }
+        return found;
+    }
+
+    return function transformer(_: unknown, file: VFile) {
         const dir = file.dirname ?? '';
         const stop = join(file.cwd, 'src', 'pages');
-        const layoutFile = findClosest(name, dir, stop);
+        const layoutFile = findLayoutFile(dir, stop);
         if (layoutFile) {
-            (file as VFile).data.astro.frontmatter.layout = layoutFile;
+            file.data.astro.frontmatter.layout = layoutFile;
         }
     };
 };
