@@ -1,4 +1,4 @@
-# Astro M²DX - Remark plugin for auto-layout
+# Astro M²DX - Remark plugin to export component mappings per-directory
 
 [`Vite`](https://vitejs.dev/guide/api-plugin.html) plugin to support per-directory default component mappings for [Astro](https://docs.astro.build/en/reference/configuration-reference/#vite) markdown-files.
 
