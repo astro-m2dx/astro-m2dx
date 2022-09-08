@@ -1,5 +1,7 @@
-[build]
-    base="apps/web"
-
 [build.environment]
-    NPM_FLAGS="--prefix=/"
+    NODE_VERSION = "16"
+    NPM_FLAGS = "--version"
+[build]
+    base = "apps/web/"
+    publish = "./dist"
+    command = "npx pnpm i --store=node_modules/.pnpm-store --frozen-lockfile && npx pnpm run -w build"
