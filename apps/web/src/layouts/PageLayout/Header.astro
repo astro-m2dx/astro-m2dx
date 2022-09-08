@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon';
+
+export interface Props {
+    class?: string;
+}
+
+const { class: className = '' } = Astro.props as Props;
+---
+
+<header class={className}>
+    <a href="/" class="home">
+        <Icon name="m2dx" alt="Home" />
+        Home
+    </a>
+    <div class="menu">
+        <a class="burger" tabindex="0">&#9776;</a>
+        <nav>
+            <a href="/docs">Docs</a>
+            <a href="https://github.com/astro-m2dx">Source</a>
+        </nav>
+    </div>
+</header>

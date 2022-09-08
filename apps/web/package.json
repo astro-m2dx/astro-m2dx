@@ -11,11 +11,17 @@
     },
     "devDependencies": {
         "@astrojs/mdx": "^0.11.1",
+        "@astrojs/tailwind": "^1.0.0",
+        "@tailwindcss/typography": "^0.5.7",
+        "astro-icon": "^0.7.3",
         "eslint-config-base": "workspace:*",
+        "postcss-import": "^15.0.0",
+        "tailwind-merge": "^1.6.0",
+        "tailwindcss": "^3.1.8",
         "tsconfig": "workspace:*"
     },
     "dependencies": {
-        "astro": "^1.1.5",
-        "@astro-m2dx/remark-astro-auto-layout": "workspace:*"
+        "@astro-m2dx/remark-astro-auto-layout": "workspace:*",
+        "astro": "^1.1.7"
     }
 }
