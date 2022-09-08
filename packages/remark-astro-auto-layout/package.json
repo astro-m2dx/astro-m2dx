@@ -1,6 +1,6 @@
 {
     "name": "@astro-m2dx/remark-astro-auto-layout",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Remark plugin to add automatic astro layouts to MDX files",
     "author": "christian@hackyourshack.org",
     "homepage": "https://astro-m2dx.netlify.app/",

@@ -1,5 +1,11 @@
 # @astro-m2dx/common
 
+## 0.0.4
+
+### Patch Changes
+
+-   [`2a79da6`](https://github.com/astro-m2dx/astro-m2dx/commit/2a79da6a0f527eab29e2dbfed94c5e9d35a13f44) Thanks [@christian-hackyourshack](https://github.com/christian-hackyourshack)! - Updated package.json with homepage and repository
+
 ## 0.0.3
 
 ### Patch Changes
