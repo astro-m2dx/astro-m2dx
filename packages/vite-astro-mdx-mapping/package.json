@@ -3,6 +3,11 @@
     "version": "0.0.2",
     "description": "Remark plugin to add automatic component mapping to MDX files",
     "author": "christian@hackyourshack.org",
+    "homepage": "https://astro-m2dx.netlify.app/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/astro-m2dx/astro-m2dx/tree/main/packages/vite-astro-mdx-mapping"
+    },
     "license": "MIT",
     "keywords": [
         "remark-plugin",

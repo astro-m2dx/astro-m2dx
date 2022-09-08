@@ -1,5 +1,10 @@
 {
     "private": true,
+    "homepage": "https://astro-m2dx.netlify.app/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/astro-m2dx/astro-m2dx"
+    },
     "scripts": {
         "prebuild": "[[ $CI = true ]] && npx pnpm@7 install -r --store=node_modules/.pnpm-store || echo Skipping pnpm install",
         "build": "turbo run build",

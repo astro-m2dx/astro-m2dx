@@ -3,6 +3,11 @@
     "version": "0.0.3",
     "description": "Remark plugin to add automatic astro layouts to MDX files",
     "author": "christian@hackyourshack.org",
+    "homepage": "https://astro-m2dx.netlify.app/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/astro-m2dx/astro-m2dx/tree/main/packages/remark-astro-auto-layout"
+    },
     "license": "MIT",
     "keywords": [
         "remark-plugin",
