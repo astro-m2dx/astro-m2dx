@@ -1,39 +1,39 @@
 {
-    "name": "@astro-m2dx/common",
-    "version": "0.0.4",
-    "description": "Common utilities for developing Astro MDX plugins",
-    "homepage": "https://astro-m2dx.netlify.app/",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/astro-m2dx/astro-m2dx/tree/main/packages/common"
-    },
-    "author": "christian@hackyourshack.org",
-    "license": "MIT",
-    "keywords": [
-        "utilities",
-        "astro",
-        "mdx",
-        "typescript"
-    ],
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
-    "type": "module",
-    "files": [
-        "lib/**/*"
-    ],
-    "scripts": {
-        "build": "tsc",
-        "clean": "rimraf -rf ./lib/"
-    },
-    "devDependencies": {
-        "@types/mdast": "^3.0.10",
-        "@types/node": "18.7.15",
-        "@types/unist": "^2.0.6",
-        "eslint-config-base": "workspace:*",
-        "rimraf": "^3.0.2",
-        "tsconfig": "workspace:*",
-        "typescript": "^4.7.4",
-        "unified": "^10.1.2",
-        "vfile": "^5.3.4"
-    }
+  "name": "@astro-m2dx/common",
+  "version": "0.0.4",
+  "description": "Common utilities for developing Astro MDX plugins",
+  "homepage": "https://astro-m2dx.netlify.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astro-m2dx/astro-m2dx/tree/main/packages/common"
+  },
+  "author": "christian@hackyourshack.org",
+  "license": "MIT",
+  "keywords": [
+    "utilities",
+    "astro",
+    "mdx",
+    "typescript"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf -rf ./lib/"
+  },
+  "devDependencies": {
+    "@types/mdast": "^3.0.10",
+    "@types/node": "18.7.15",
+    "@types/unist": "^2.0.6",
+    "eslint-config-base": "workspace:*",
+    "rimraf": "^3.0.2",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.7.4",
+    "unified": "^10.1.2",
+    "vfile": "^5.3.4"
+  }
 }

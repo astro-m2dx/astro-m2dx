@@ -13,12 +13,12 @@ const DEFAULT_PROPERTY = 'mdx';
  *     ...
  */
 export interface Options {
-    /**
-     * Name of Astro layout files to detect in the directory of the MDX-page.
-     *
-     * The default is '_layout.astro'
-     */
-    property: string;
+  /**
+   * Name of Astro layout files to detect in the directory of the MDX-page.
+   *
+   * The default is '_layout.astro'
+   */
+  property: string;
 }
 
 /**
@@ -27,11 +27,11 @@ export interface Options {
  * @returns transformer function, that operates only on VFile level
  */
 export const plugin: Plugin<[Partial<Options>], unknown> = (options = {}) => {
-    const { property = DEFAULT_PROPERTY } = options;
+  const { property = DEFAULT_PROPERTY } = options;
 
-    return function transformer(_: unknown, file: VFile) {
-        file.data.astro.frontmatter[property] = file.value;
-    };
+  return function transformer(_: unknown, file: VFile) {
+    file.data.astro.frontmatter[property] = file.value;
+  };
 };
 
 export default plugin;

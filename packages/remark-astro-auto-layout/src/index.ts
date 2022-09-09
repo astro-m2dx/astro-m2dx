@@ -14,12 +14,12 @@ const DEFAULT_NAME = '_layout.astro';
  *     ...
  */
 export interface Options {
-    /**
-     * Name of Astro layout files to detect in the directory of the MDX-page.
-     *
-     * The default is '_layout.astro'
-     */
-    name: string;
+  /**
+   * Name of Astro layout files to detect in the directory of the MDX-page.
+   *
+   * The default is '_layout.astro'
+   */
+  name: string;
 }
 
 /**
@@ -28,28 +28,28 @@ export interface Options {
  * @returns transformer function, that operates only on VFile level
  */
 export const plugin: Plugin<[Partial<Options>], unknown> = (options = {}) => {
-    const { name = DEFAULT_NAME } = options;
-    const cache: Record<string, string> = {};
+  const { name = DEFAULT_NAME } = options;
+  const cache: Record<string, string> = {};
 
-    function findLayoutFile(dir: string, stop: string) {
-        let found: string | undefined = cache[dir];
-        if (!found) {
-            found = findUp(name, dir, stop);
-            if (found) {
-                cache[dir] = found;
-            }
-        }
-        return found;
+  function findLayoutFile(dir: string, stop: string) {
+    let found: string | undefined = cache[dir];
+    if (!found) {
+      found = findUp(name, dir, stop);
+      if (found) {
+        cache[dir] = found;
+      }
     }
+    return found;
+  }
 
-    return function transformer(_: unknown, file: VFile) {
-        const dir = file.dirname ?? '';
-        const stop = join(file.cwd, 'src', 'pages');
-        const layoutFile = findLayoutFile(dir, stop);
-        if (layoutFile) {
-            file.data.astro.frontmatter.layout = layoutFile;
-        }
-    };
+  return function transformer(_: unknown, file: VFile) {
+    const dir = file.dirname ?? '';
+    const stop = join(file.cwd, 'src', 'pages');
+    const layoutFile = findLayoutFile(dir, stop);
+    if (layoutFile) {
+      file.data.astro.frontmatter.layout = layoutFile;
+    }
+  };
 };
 
 export default plugin;

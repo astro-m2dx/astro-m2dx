@@ -1,12 +1,12 @@
 {
-    "extends": "tsconfig/vite.json",
-    "compilerOptions": {
-        "baseUrl": "src",
-        "paths": {
-            "@components/*": ["components/*"],
-            "@layouts/*": ["layouts/*"],
-            "@partials/*": ["partials/*"],
-            "@styles/*": ["styles/*"]
-        }
+  "extends": "tsconfig/vite.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@partials/*": ["partials/*"],
+      "@styles/*": ["styles/*"]
     }
+  }
 }

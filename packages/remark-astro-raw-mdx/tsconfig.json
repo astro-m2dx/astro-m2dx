@@ -1,9 +1,9 @@
 {
-    "extends": "tsconfig/vite.json",
-    "compilerOptions": {
-        "baseUrl": "src",
-        "noEmit": false,
-        "outDir": "lib"
-    },
-    "include": ["src/**/*"]
+  "extends": "tsconfig/vite.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "noEmit": false,
+    "outDir": "lib"
+  },
+  "include": ["src/**/*"]
 }

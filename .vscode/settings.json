@@ -1,6 +1,11 @@
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "[astro]": {
-        "editor.defaultFormatter": "astro-build.astro-vscode"
-    }
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "editor.tabSize": 2,
+  "markdown.extension.toc.levels": "2..6",
+  "terminal.integrated.cursorWidth": 3,
+  "prettier.printWidth": 100,
+  "editor.minimap.maxColumn": 100
 }

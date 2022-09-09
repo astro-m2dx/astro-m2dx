@@ -2,12 +2,12 @@ import { accessSync, constants, PathLike } from 'fs';
 import * as path from 'path';
 
 export function exists(path: PathLike) {
-    try {
-        accessSync(path, constants.F_OK);
-        return true;
-    } catch {
-        return false;
-    }
+  try {
+    accessSync(path, constants.F_OK);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 /**
@@ -19,13 +19,13 @@ export function exists(path: PathLike) {
  * @returns path of file, if found, `undefined` otherwise
  */
 export function findUp(name: string, dir: string, stop = ''): string | undefined {
-    if (!dir || (stop && !dir.startsWith(stop))) {
-        return undefined;
-    }
-    const file = path.join(dir, name);
-    if (exists(file)) {
-        return file;
-    } else {
-        return findUp(name, path.dirname(dir), stop);
-    }
+  if (!dir || (stop && !dir.startsWith(stop))) {
+    return undefined;
+  }
+  const file = path.join(dir, name);
+  if (exists(file)) {
+    return file;
+  } else {
+    return findUp(name, path.dirname(dir), stop);
+  }
 }

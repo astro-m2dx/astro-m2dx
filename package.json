@@ -1,36 +1,36 @@
 {
-    "private": true,
-    "homepage": "https://astro-m2dx.netlify.app/",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/astro-m2dx/astro-m2dx"
-    },
-    "scripts": {
-        "prebuild": "[[ $CI = true ]] && npx pnpm@7 install -r --store=node_modules/.pnpm-store || echo Skipping pnpm install",
-        "build": "turbo run build",
-        "build:ci": "turbo run build",
-        "dev": "turbo run dev --no-cache --parallel --continue",
-        "lint": "turbo run lint",
-        "clean": "turbo run clean && rm -rf node_modules",
-        "format": "prettier --write \"**/*.{ts,tsx,md,mdx,astro}\"",
-        "changeset": "pnpm install --no-frozen-lockfile && pnpm run format && changeset",
-        "version": "changeset version",
-        "publish": "turbo run build && changeset publish"
-    },
-    "packageManager": "pnpm@7.11.0",
-    "engines": {
-        "node": ">=14.0.0",
-        "pnpm": ">=7.11.0"
-    },
-    "dependencies": {
-        "@changesets/changelog-github": "^0.4.6",
-        "@changesets/cli": "^2.24.4",
-        "eslint-config-base": "workspace:*",
-        "prettier": "latest",
-        "prettier-plugin-astro": "^0.5.4",
-        "turbo": "latest"
-    },
-    "devDependencies": {
-        "pnpm": "^7.11.0"
-    }
+  "private": true,
+  "homepage": "https://astro-m2dx.netlify.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astro-m2dx/astro-m2dx"
+  },
+  "scripts": {
+    "prebuild": "[[ $CI = true ]] && npx pnpm@7 install -r --store=node_modules/.pnpm-store || echo Skipping pnpm install",
+    "build": "turbo run build",
+    "build:ci": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{astro,json,md,mdx,ts,tsx}\"",
+    "changeset": "pnpm install --no-frozen-lockfile && pnpm run format && changeset",
+    "version": "changeset version",
+    "publish": "turbo run build && changeset publish"
+  },
+  "packageManager": "pnpm@7.11.0",
+  "engines": {
+    "node": ">=14.0.0",
+    "pnpm": ">=7.11.0"
+  },
+  "dependencies": {
+    "@changesets/changelog-github": "^0.4.6",
+    "@changesets/cli": "^2.24.4",
+    "eslint-config-base": "workspace:*",
+    "prettier": "latest",
+    "prettier-plugin-astro": "^0.5.4",
+    "turbo": "latest"
+  },
+  "devDependencies": {
+    "pnpm": "^7.11.0"
+  }
 }

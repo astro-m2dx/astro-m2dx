@@ -2,11 +2,11 @@
 import { twMerge } from 'tailwind-merge';
 
 export interface Props {
-    class?: string;
+  class?: string;
 }
 const { class: className = '' } = Astro.props;
 ---
 
 <div class={twMerge('wrap', className)}>
-    <slot />
+  <slot />
 </div>

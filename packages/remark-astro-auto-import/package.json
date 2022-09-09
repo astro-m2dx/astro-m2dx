@@ -1,40 +1,40 @@
 {
-    "name": "@astro-m2dx/remark-astro-auto-import",
-    "version": "0.0.2",
-    "description": "Remark plugin to add automatic component imports to MDX files",
-    "author": "christian@hackyourshack.org",
-    "homepage": "https://astro-m2dx.netlify.app/",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/astro-m2dx/astro-m2dx/tree/main/packages/remark-astro-auto-import"
-    },
-    "license": "MIT",
-    "keywords": [
-        "remark-plugin",
-        "astro",
-        "mdx",
-        "layout"
-    ],
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
-    "type": "module",
-    "files": [
-        "lib/**/*"
-    ],
-    "scripts": {
-        "build": "tsc",
-        "clean": "rimraf -rf ./lib/"
-    },
-    "devDependencies": {
-        "@types/mdast": "^3.0.10",
-        "eslint-config-base": "workspace:*",
-        "rimraf": "^3.0.2",
-        "tsconfig": "workspace:*",
-        "typescript": "^4.7.4",
-        "unified": "^10.1.2"
-    },
-    "dependencies": {
-        "@astro-m2dx/common": "workspace:*",
-        "unist-util-visit": "^4.1.1"
-    }
+  "name": "@astro-m2dx/remark-astro-auto-import",
+  "version": "0.0.2",
+  "description": "Remark plugin to add automatic component imports to MDX files",
+  "author": "christian@hackyourshack.org",
+  "homepage": "https://astro-m2dx.netlify.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astro-m2dx/astro-m2dx/tree/main/packages/remark-astro-auto-import"
+  },
+  "license": "MIT",
+  "keywords": [
+    "remark-plugin",
+    "astro",
+    "mdx",
+    "layout"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf -rf ./lib/"
+  },
+  "devDependencies": {
+    "@types/mdast": "^3.0.10",
+    "eslint-config-base": "workspace:*",
+    "rimraf": "^3.0.2",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.7.4",
+    "unified": "^10.1.2"
+  },
+  "dependencies": {
+    "@astro-m2dx/common": "workspace:*",
+    "unist-util-visit": "^4.1.1"
+  }
 }

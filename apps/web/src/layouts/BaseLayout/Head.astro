@@ -6,24 +6,24 @@ import OpenGraph from './OpenGraph.astro';
 import TwitterCard from './TwitterCard.astro';
 
 export interface Props {
-    title?: string;
-    description?: string;
-    image?: string;
-    searchWords?: string[];
-    feed?: string;
-    next?: string;
-    prev?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  searchWords?: string[];
+  feed?: string;
+  next?: string;
+  prev?: string;
 }
 
 function seoTitle(siteTitle: string, pageTitle?: string, searchWords?: string[]): string {
-    let title = siteTitle;
-    if (pageTitle) {
-        title = `${pageTitle} | ${title}`;
-    }
-    if (searchWords) {
-        title = `${title.padEnd(32, ' ')}[${searchWords.join(', ')}]`;
-    }
-    return title;
+  let title = siteTitle;
+  if (pageTitle) {
+    title = `${pageTitle} | ${title}`;
+  }
+  if (searchWords) {
+    title = `${title.padEnd(32, ' ')}[${searchWords.join(', ')}]`;
+  }
+  return title;
 }
 
 const props = Astro.props as Props;
@@ -48,9 +48,9 @@ const canonicalURL = site.canonicalURL;
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet" />
 {
-    feed && (
-        <link rel="alternate" type="application/rss+xml" href={new URL(feed, canonicalURL).href} />
-    )
+  feed && (
+    <link rel="alternate" type="application/rss+xml" href={new URL(feed, canonicalURL).href} />
+  )
 }
 {next && <link rel="next" aria-label="Previous Page" href={new URL(next, canonicalURL).href} />}
 {prev && <link rel="prev" aria-label="Next Page" href={new URL(prev, canonicalURL).href} />}

@@ -2,15 +2,15 @@
 import { twMerge } from 'tailwind-merge';
 
 export interface Props {
-    class?: string;
-    title: string;
+  class?: string;
+  title: string;
 }
 const { class: className = '', title } = Astro.props;
 ---
 
 <article class={twMerge('card', className)}>
-    <h5 class="card__title">{title}</h5>
-    <p class="card__content">
-        <slot />
-    </p>
+  <h5 class="card__title">{title}</h5>
+  <p class="card__content">
+    <slot />
+  </p>
 </article>
