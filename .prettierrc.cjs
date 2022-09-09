@@ -17,12 +17,6 @@ module.exports = {
       },
     },
     {
-      files: ['*.md', '*.mdx'],
-      options: {
-        tabWidth: 2,
-      },
-    },
-    {
       files: ['**/*.astro'],
       options: {
         parser: 'astro',
