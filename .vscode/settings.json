@@ -7,5 +7,6 @@
   "markdown.extension.toc.levels": "2..6",
   "terminal.integrated.cursorWidth": 3,
   "prettier.printWidth": 100,
-  "editor.minimap.maxColumn": 100
+  "editor.minimap.maxColumn": 100,
+  "svg.preview.background": "dark-transparent"
 }

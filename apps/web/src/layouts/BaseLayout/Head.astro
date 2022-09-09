@@ -38,11 +38,13 @@ const canonicalURL = site.canonicalURL;
 <title>{title}</title>
 <meta name="description" content={props.description} />
 
-<OpenGraph {...props} {canonicalURL} />
+<OpenGraph {...props} canonicalURL={canonicalURL} />
 {site.twitter && <TwitterCard {...props} account={site.twitter} />}
 
 <link rel="canonical" href={canonicalURL} />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="sitemap" href="/sitemap.xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
