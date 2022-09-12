@@ -31,10 +31,10 @@ export const plugin: Plugin<[Partial<Options>], unknown> = (options = {}) => {
   const { name = DEFAULT_NAME } = options;
   const cache: Record<string, string> = {};
 
-  function findLayoutFile(dir: string, stop: string) {
+  async function findLayoutFile(dir: string, stop: string) {
     let found: string | undefined = cache[dir];
     if (!found) {
-      found = findUp(name, dir, stop);
+      found = await findUp(name, dir, stop);
       if (found) {
         cache[dir] = found;
       }
@@ -42,10 +42,10 @@ export const plugin: Plugin<[Partial<Options>], unknown> = (options = {}) => {
     return found;
   }
 
-  return function transformer(_: unknown, file: VFile) {
+  return async function transformer(_: unknown, file: VFile) {
     const dir = file.dirname ?? '';
     const stop = join(file.cwd, 'src', 'pages');
-    const layoutFile = findLayoutFile(dir, stop);
+    const layoutFile = await findLayoutFile(dir, stop);
     if (layoutFile) {
       file.data.astro.frontmatter.layout = layoutFile;
     }

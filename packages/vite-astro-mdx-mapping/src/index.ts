@@ -34,10 +34,10 @@ export const plugin: Plugin<[Partial<Options>], unknown> = (options = {}) => {
   const cache: Record<string, string> = {};
 
   const stop = join(process.cwd(), 'src');
-  function findMappingFile(dir: string) {
+  async function findMappingFile(dir: string) {
     let found: string | undefined = cache[dir];
     if (!found) {
-      found = findUp(name, dir, stop);
+      found = await findUp(name, dir, stop);
       if (found) {
         cache[dir] = found;
       }
@@ -51,7 +51,7 @@ export const plugin: Plugin<[Partial<Options>], unknown> = (options = {}) => {
 
     async transform(src: string, id: string) {
       if (id.endsWith('.mdx')) {
-        const mapping = findMappingFile(dirname(id));
+        const mapping = await findMappingFile(dirname(id));
         if (mapping) {
           const found = src.match(EXISTING_EXPORT);
           if (!found) {

@@ -1,5 +1,5 @@
 import autoImport from '@astro-m2dx/remark-astro-auto-import';
-import autoLayout from '@astro-m2dx/remark-astro-auto-layout';
+import frontmatter from '@astro-m2dx/remark-astro-frontmatter';
 import rawMdx from '@astro-m2dx/remark-astro-raw-mdx';
 import sectionizeHeadings from '@astro-m2dx/remark-sectionize-headings';
 import mdxMapping from '@astro-m2dx/vite-astro-mdx-mapping';
@@ -12,7 +12,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   integrations: [mdx(), tailwind()],
   markdown: {
-    remarkPlugins: [autoImport, autoLayout, rawMdx, [sectionizeHeadings, { levels: [2] }]],
+    remarkPlugins: [autoImport, frontmatter, rawMdx, [sectionizeHeadings, { levels: [2] }]],
     extendDefaultPlugins: true,
   },
   vite: {

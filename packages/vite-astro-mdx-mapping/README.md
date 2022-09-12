@@ -1,6 +1,6 @@
 # Astro M²DX - Vite plugin to export component mappings per-directory
 
-[`Vite`](https://vitejs.dev/guide/api-plugin.html) plugin to support per-directory default component mappings for [Astro](https://docs.astro.build/en/reference/configuration-reference/#vite) markdown-files.
+Vite plugin to define common component mappings for all Astro markdown files in a directory.
 
 ## Content <!-- omit in toc -->
 

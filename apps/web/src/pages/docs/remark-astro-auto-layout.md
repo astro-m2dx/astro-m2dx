@@ -1,6 +1,12 @@
 # Astro M²DX - Remark plugin for auto-layout
 
-[`remark`](https://github.com/remarkjs/remark/blob/main/doc/plugins.md) plugin to support per-directory default layouts for [Astro](https://docs.astro.build/en/guides/integrations-guide/mdx/#remarkplugins) markdown-pages.
+_DEPRECATED_
+
+remark plugin to support per-directory default layouts for Astro markdown-pages. This plugin is deprecated, please use the plugin [`remark-astro-frontmatter`](https://www.npmjs.com/package/@astro-m2dx/remark-astro-frontmatter) instead.
+
+[Astro M²DX](https://astro-m2dx.netlify.app) is a set of plugins allowing you to define an [Astro](https://astro.build) 🚀 publishing pipeline for Markdown/MDX documents with full [MDX](https://mdxjs.com) features, but without the technical fuss, i.e. you and your non-tech editors can write **clean** markdown.
+
+Have a look at the other [`astro-m2dx` plugins](https://www.npmjs.com/org/astro-m2dx).
 
 ## Content <!-- omit in toc -->
 

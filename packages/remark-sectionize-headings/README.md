@@ -1,6 +1,12 @@
 # Astro M²DX - Remark plugin to wrap headings in sections
 
-[`remark`](https://github.com/remarkjs/remark/blob/main/doc/plugins.md) plugin to wrap markdown headings and the following paragraphs in HTML sections.
+remark plugin to wrap markdown headings and the following paragraphs in HTML sections.
+
+An alternative could be [remark-sectionize](https://www.npmjs.com/package/remark-sectionize), but this plugin offers a few more options and adds a CSS class according to the heading level to the resulting section.
+
+[Astro M²DX](https://astro-m2dx.netlify.app) is a set of plugins allowing you to define an [Astro](https://astro.build) 🚀 publishing pipeline for Markdown/MDX documents with full [MDX](https://mdxjs.com) features, but without the technical fuss, i.e. you and your non-tech editors can write **clean** markdown.
+
+Have a look at the other [`astro-m2dx` plugins](https://www.npmjs.com/org/astro-m2dx).
 
 ## Content <!-- omit in toc -->
 
@@ -17,6 +23,8 @@ This package is a [`remark`](https://github.com/remarkjs/remark/blob/main/doc/pl
 ## When should I use this?
 
 If you want to style sections of your document according to heading levels.
+
+This is a pure remark plugin and can be used easily outside of an Astro context.
 
 ## Install
 

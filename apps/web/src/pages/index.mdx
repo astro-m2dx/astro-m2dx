@@ -20,35 +20,39 @@ This is the complete MDX source for this page (embedded from the injected raw co
 > ✔️ Only very few components  
 > ✔️ Mostly pure markdown
 
-## Check out the existing plugins...
+## Check out the existing plugins
 
 <Wrap>
-  <Card title="Auto Layout" href="docs/plugin-remark-astro-auto-layout">
-    `remark-astro-auto-layout` lets users define a default layout for all MDX-pages in a directory
-    and its subdirectories.
+  <Card title="Frontmatter" href="docs/remark-astro-frontmatter">
+    `remark-astro-frontmatter` lets users define common frontmatter for all MDX-pages in a directory
+    and its subdirectories, e.g. a common `layout`.
   </Card>
-  <Card title="Element Mapping" href="docs/plugin-vite-astro-mdx-mapping">
+  <Card title="Element Mapping" href="docs/vite-astro-mdx-mapping">
     Plugin `vite-astro-mdx-mapping` lets users define a mapping from standard html elements to JSX
     components on a per-directory basis.
   </Card>
-  <Card title="Raw MDX Content" href="docs/plugin-remark-astro-raw-mdx">
+  <Card title="Raw MDX Content" href="docs/remark-astro-raw-mdx">
     Plugin `remark-astro-raw-mdx` adds the raw MDX content to the frontmatter, to analyze in the
     layout, e.g. to compute reading time.
   </Card>
-  <Card title="Auto Import" href="docs/plugin-remark-astro-auto-import">
+  <Card title="Auto Import" href="docs/remark-astro-auto-import">
     Plugin `remark-astro-auto-import` lets users define a set of components that can be used in
     MDX-files without explicitly being imported.
   </Card>
-  <Card title="Sections for Headings" href="docs/plugin-remark-sectionize-headings">
+  <Card title="Sections for Headings" href="docs/remark-sectionize-headings">
     Plugin `remark-sectionize-headings` wraps headings and the following paragraphs into sections,
     e.g. to style them with CSS' `nth-child(even)`.
   </Card>
 </Wrap>
 
-## Discuss upcoming plugins...
+## Discuss upcoming plugins
 
 - **remark-astro-title-abstract** - extracts the title and abstract of a markdown file and adds it to the frontmatter `title` and `abstract` properties.
 - **remark-astro-import-src** - imports files relative to referencing file from string `src` attributes.
 - **remark-astro-style-directive** - lets users apply CSS classes to the HTML elements resulting from the markdown.
 - **remark-astro-mdast** - adds the markdown AST (`mdast`) to the frontmatter, to analyze in the layout, e.g. to generate a TOC.
 - **remark-astro-hast** - adds the HTML AST (`hast`) to the frontmatter, to analyze in the layout, e.g. to ???.
+
+## Deprecated
+
+- **remark-astro-auto-layout** - despite being the most successful plugin thus far, you should use the `remark-astro-frontmatter` plugin instead to define your common layout.

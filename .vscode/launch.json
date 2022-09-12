@@ -2,11 +2,26 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "cwd": "${workspaceFolder}/apps/web",
-      "command": "./node_modules/.bin/astro dev",
-      "name": "apps/web dev server",
+      "name": "apps/web: DevServer",
+      "type": "node-terminal",
       "request": "launch",
-      "type": "node-terminal"
+      "cwd": "${workspaceFolder}/apps/web",
+      "command": "./node_modules/.bin/astro dev"
+    },
+    {
+      "name": "packages/common: Tests",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/common",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/packages/common/node_modules/jest/bin/jest.js",
+        "--testTimeout",
+        "100000000",
+        "--runInBand"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }

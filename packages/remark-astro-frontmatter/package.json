@@ -1,0 +1,41 @@
+{
+  "name": "@astro-m2dx/remark-astro-frontmatter",
+  "version": "0.0.0",
+  "description": "Remark plugin to add common frontmatter to markdown files",
+  "author": "christian@hackyourshack.org",
+  "homepage": "https://astro-m2dx.netlify.app/docs/plugin-remark-astro-frontmatter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astro-m2dx/astro-m2dx/tree/main/packages/remark-astro-frontmatter"
+  },
+  "license": "MIT",
+  "keywords": [
+    "remark-plugin",
+    "astro",
+    "markdown",
+    "frontmatter"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf -rf ./lib/"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "@types/mdast": "^3.0.10",
+    "eslint-config-base": "workspace:*",
+    "rimraf": "^3.0.2",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.7.4",
+    "unified": "^10.1.2"
+  },
+  "dependencies": {
+    "@astro-m2dx/common": "workspace:*",
+    "js-yaml": "^4.1.0"
+  }
+}

@@ -1,6 +1,10 @@
 # Astro M²DX - Remark plugin to inject raw MDX into frontmatter
 
-[`remark`](https://github.com/remarkjs/remark/blob/main/doc/plugins.md) plugin to add the raw markdown content to the frontmatter of your [Astro](https://docs.astro.build/en/guides/integrations-guide/mdx/#remarkplugins) MDX-files.
+remark plugin to add the raw markdown content to the frontmatter of your Astro MDX files.
+
+[Astro M²DX](https://astro-m2dx.netlify.app) is a set of plugins allowing you to define an [Astro](https://astro.build) 🚀 publishing pipeline for Markdown/MDX documents with full [MDX](https://mdxjs.com) features, but without the technical fuss, i.e. you and your non-tech editors can write **clean** markdown.
+
+Have a look at the other [`astro-m2dx` plugins](https://www.npmjs.com/org/astro-m2dx).
 
 ## Content <!-- omit in toc -->
 
@@ -14,11 +18,11 @@
 
 This package is a [`remark`](https://github.com/remarkjs/remark/blob/main/doc/plugins.md) plugin to add the raw markdown content to the frontmatter of your MDX files in the context of [Astro](https://docs.astro.build/en/guides/integrations-guide/mdx/#remarkplugins) site generation.
 
-In Astro MDX files do not carry the raw MDX content anymore, once you import them. With this plugin you can access the raw content in the frontmatter `mdx` property.
+Astro MDX files do not carry the raw MDX content anymore, once you import them. With this plugin you can access the raw content in the frontmatter `mdx` property.
 
 ## When should I use this?
 
-If you want to have access to the raw MDX content while generating your pages.
+If you want to have access to the raw MDX content while generating your Astro pages.
 
 ## Install
 

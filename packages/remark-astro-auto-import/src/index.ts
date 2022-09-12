@@ -39,13 +39,13 @@ export const plugin: Plugin<[Partial<Options>], unknown> = (options = {}) => {
   const { name = DEFAULT_NAME } = options;
   const cache: Record<string, AutoImport | null> = {};
 
-  function findAutoImport(dir: string, stop: string) {
+  async function findAutoImport(dir: string, stop: string) {
     // use null as marker that there is no file for this directory
     const found: AutoImport | null | undefined = cache[dir];
     if (found || found === null) {
       return found;
     }
-    const file = findUp(name, dir, stop);
+    const file = await findUp(name, dir, stop);
     if (file) {
       const components = readComponents(file);
       return (cache[dir] = { file, components });

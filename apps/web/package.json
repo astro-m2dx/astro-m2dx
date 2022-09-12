@@ -25,10 +25,10 @@
   },
   "dependencies": {
     "@astro-m2dx/remark-astro-auto-import": "workspace:*",
-    "@astro-m2dx/remark-astro-auto-layout": "workspace:*",
+    "@astro-m2dx/remark-astro-frontmatter": "workspace:*",
     "@astro-m2dx/remark-astro-raw-mdx": "workspace:*",
     "@astro-m2dx/remark-sectionize-headings": "workspace:*",
     "@astro-m2dx/vite-astro-mdx-mapping": "workspace:*",
-    "astro": "^1.1.7"
+    "astro": "^1.2.1"
   }
 }
