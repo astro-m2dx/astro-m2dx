@@ -17,16 +17,13 @@ The following plugins are available:
 - **remark-astro-auto-import** - lets users define a set of components that can be used in MDX-files without explicitly being imported.
 - **remark-astro-auto-layout** - lets users define a default layout for all MDX-pages in a directory and its subdirectories.
 - **remark-astro-raw-content** - adds the raw markdown content to the frontmatter, to analyze in the layout, e.g. to compute reading time.
+- **remark-sectionize-headings** - wrap headings and the following paragraphs into sections, e.g. to style them.
 - **vite-astro-mdx-mapping** - lets users define a mapping from standard html elements to JSX components on a per-directory basis.
 
 The following plugins are planned:
 
-- **remark-astro-sectionize-headings** - wrap headings and the following paragraphs into sections, e.g. to style them.
+- **remark-astro-title-abstract** - extracts the title and abstract of a markdown file and adds it to the frontmatter `title` and `abstract` properties.
 - **remark-astro-import-src** - imports files relative to referencing file from string `src` attributes.
 - **remark-astro-style-directive** - lets users apply CSS classes to the HTML elements resulting from the markdown.
 - **remark-astro-mdast** - adds the markdown AST (`mdast`) to the frontmatter, to analyze in the layout, e.g. to generate a TOC.
 - **remark-astro-hast** - adds the HTML AST (`hast`) to the frontmatter, to analyze in the layout, e.g. to ???.
-
-## Future enhancements
-
-- Support tailwind for components coming from a monorepo, see the [Turborepo examples](https://github.com/vercel/turborepo/tree/main/examples/with-tailwind) for details

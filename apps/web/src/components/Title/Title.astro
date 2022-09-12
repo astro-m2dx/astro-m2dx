@@ -1,11 +1,19 @@
 ---
+import { twMerge } from 'tailwind-merge';
 export interface Props {
   class?: string;
 }
 const { class: className = '' } = Astro.props;
 ---
 
-<h1 class={className}><slot /></h1>
+<h1
+  class={twMerge(
+    'bg-clip-text pb-3 text-transparent bg-gradient-to-r from-slate-800 to-slate-800 via-yellow-500',
+    className
+  )}
+>
+  <slot />
+</h1>
 
 <style>
   @keyframes shine {
@@ -15,13 +23,7 @@ const { class: className = '' } = Astro.props;
   }
 
   h1 {
-    padding-bottom: 0.75rem;
     animation: shine 5s ease-in-out infinite;
-    background: linear-gradient(to right, #000 0%, #000 50%, #f9ac00 70%, #f9ac00 80%, #000 100%);
     background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
   }
 </style>
