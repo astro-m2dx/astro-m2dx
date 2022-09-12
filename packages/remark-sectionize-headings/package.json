@@ -1,6 +1,6 @@
 {
   "name": "@astro-m2dx/remark-sectionize-headings",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Remark plugin to wrap headings and their following child paragraphs in sections",
   "author": "christian@hackyourshack.org",
   "homepage": "https://astro-m2dx.netlify.app/",
