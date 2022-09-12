@@ -4,11 +4,15 @@ This project provides an example of how magic the use of [MDX](https://mdxjs.com
 
 _Astro M²DX_ provides tools to setup your publishing pipeline based on **clean** MDX, using [Astro's MDX support](https://docs.astro.build/en/guides/markdown-content/).
 
-## Clean MDX === Magic MDX
+On NPM you'll find all [`astro-m2dx` plugins](https://www.npmjs.com/org/astro-m2dx).
 
-With clean we mean markdown, with only a few sprinkles of JSX and without overloading the frontmatter.
+## Clean MDX = Magic MDX
 
-<Claim>Less `X` ... More Magic</Claim>
+With clean I mean markdown, with only a few sprinkles of JSX and without overloading the frontmatter.
+
+<Claim>Less `X` ... More Magic*</Claim>
+
+`*` If you compare the M²DX logo with the official MDX logo, you will see that I would liek to pronounce the M more than the X.
 
 This is the complete MDX source for this page (embedded from the injected raw content, see plugin `remark-astro-raw-mdx` for details):
 
@@ -23,23 +27,23 @@ This is the complete MDX source for this page (embedded from the injected raw co
 ## Check out the existing plugins
 
 <Wrap>
-  <Card title="Frontmatter" href="docs/remark-astro-frontmatter">
+  <Card title="Frontmatter" href="/docs/remark-astro-frontmatter">
     `remark-astro-frontmatter` lets users define common frontmatter for all MDX-pages in a directory
     and its subdirectories, e.g. a common `layout`.
   </Card>
-  <Card title="Element Mapping" href="docs/vite-astro-mdx-mapping">
+  <Card title="Element Mapping" href="/docs/vite-astro-mdx-mapping">
     Plugin `vite-astro-mdx-mapping` lets users define a mapping from standard html elements to JSX
     components on a per-directory basis.
   </Card>
-  <Card title="Raw MDX Content" href="docs/remark-astro-raw-mdx">
+  <Card title="Raw MDX Content" href="/docs/remark-astro-raw-mdx">
     Plugin `remark-astro-raw-mdx` adds the raw MDX content to the frontmatter, to analyze in the
     layout, e.g. to compute reading time.
   </Card>
-  <Card title="Auto Import" href="docs/remark-astro-auto-import">
+  <Card title="Auto Import" href="/docs/remark-astro-auto-import">
     Plugin `remark-astro-auto-import` lets users define a set of components that can be used in
     MDX-files without explicitly being imported.
   </Card>
-  <Card title="Sections for Headings" href="docs/remark-sectionize-headings">
+  <Card title="Sections for Headings" href="/docs/remark-sectionize-headings">
     Plugin `remark-sectionize-headings` wraps headings and the following paragraphs into sections,
     e.g. to style them with CSS' `nth-child(even)`.
   </Card>
