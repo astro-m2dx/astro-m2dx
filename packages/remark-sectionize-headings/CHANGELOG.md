@@ -1,5 +1,14 @@
 # @astro-m2dx/remark-astro-auto-import
 
+## 0.0.3
+
+### Patch Changes
+
+- [`8a9872c`](https://github.com/astro-m2dx/astro-m2dx/commit/8a9872cb5c4a8d85a3876fb129ec125eec5526ed) Thanks [@christian-hackyourshack](https://github.com/christian-hackyourshack)! - Deprecating all packages from @astro-m2dx in favor of astro-m2dx
+
+- Updated dependencies [[`8a9872c`](https://github.com/astro-m2dx/astro-m2dx/commit/8a9872cb5c4a8d85a3876fb129ec125eec5526ed)]:
+  - @astro-m2dx/common@0.0.6
+
 ## 0.0.2
 
 ### Patch Changes
