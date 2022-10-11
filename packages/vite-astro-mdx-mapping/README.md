@@ -1,5 +1,7 @@
 # Astro M²DX - Vite plugin to export component mappings per-directory
 
+> **DEPRECATED:** Please consider using the plugin [astro-m2dx](https://www.npmjs.com/package/astro-m2dx), which bundles all features from the different `@astro-m2dx` plugins in one plugin (all features are opt-in).
+
 Vite plugin to define common component mappings for all Astro markdown files in a directory.
 
 ## Content <!-- omit in toc -->

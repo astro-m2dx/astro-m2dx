@@ -1,5 +1,7 @@
 # Astro M²DX - Magic MDX in Astro
 
+> **DEPRECATED:** Please consider using the plugin [astro-m2dx](https://www.npmjs.com/package/astro-m2dx), which bundles all features from the different `@astro-m2dx` plugins in one plugin (all features are opt-in).
+
 This project provides an example of how magic the use of [MDX](https://mdxjs.com) in [Astro](https://astro.build) can be, to create beautiful and function-rich web sites, even for non-tech editors.
 
 The goal is, to provide content-editors with the ability to write almost clean markdown, with only a few sprinkles of JSX and without overloading the frontmatter.

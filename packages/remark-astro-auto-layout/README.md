@@ -1,6 +1,6 @@
 # Astro M²DX - Remark plugin for auto-layout
 
-_DEPRECATED_
+> **DEPRECATED:** Please consider using the plugin [astro-m2dx](https://www.npmjs.com/package/astro-m2dx), which bundles all features from the different `@astro-m2dx` plugins in one plugin (all features are opt-in).
 
 remark plugin to support per-directory default layouts for Astro markdown-pages. This plugin is deprecated, please use the plugin [`remark-astro-frontmatter`](https://www.npmjs.com/package/@astro-m2dx/remark-astro-frontmatter) instead.
 
