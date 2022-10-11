@@ -1,6 +1,6 @@
 {
   "name": "@astro-m2dx/remark-astro-frontmatter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Remark plugin to add common frontmatter to markdown files",
   "author": "christian@hackyourshack.org",
   "homepage": "https://astro-m2dx.netlify.app/docs/plugin-remark-astro-frontmatter",
